@@ -1,4 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Main from './pages/main';
+import Detail from './pages/detail';
+
 const App = () => {
-  return <div className='bg-red-100'>Hellow, React!!!!!</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/:id' element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
+
 export default App;
